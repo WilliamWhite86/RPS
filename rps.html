@@ -1,93 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-
 <body>
     <script>
-        // initializing wins, ties, and losses
         var wins = 0;
         var ties = 0;
-        var losses = 0;
-
-        // Loops to run through 10 rounds
-        for (var i = 0; i < 10; i++) {
-            // prompt for selection from user
-            var selection = prompt("Choose r, p, or s");
-            // change input to lower case
-            selection = selection.toLowerCase;
-            // generates random computer selection 1-3
-            var random = Math.floor(Math.random() * 3) + 1;
-            
-            // Alerts computer selection as rock, paper, or scissors
-            if (random == 1) {
-                alert("The computer chose rock");
-            } else if (random == 2) {
-                alert("The computer chose paper")
-            } else {
-                alert("The computer chose scissors")
-            }
-
-            // Runs through scenarios for user selecting rock
-            if (selection == "r") {
-                if (random == 1) {
-                    alert("You tied");
-                    ties++;
-                } else if (random == 2) {
-                    alert("You lose");
-                    losses++;
-                } else {
-                    alert("You win!")
-                    wins++;
-                }
-            }
-
-            // Runs through scenarios for user selecting paper
-            if (selection == "p") {
-                if (random == 2) {
-                    alert("You tied");
-                    ties++;
-                } else if (random == 3) {
-                    alert("You lose");
-                    losses++;
-                } else {
-                    alert("You win!")
-                    wins++;
-                }
-            }
-
-            // Runs through scenarios for user selecting scissors
-            if (selection == "s") {
-                if (random == 3) {
-                    alert("You tied");
-                    ties++;
-                } else if (random == 1) {
-                    alert("You lose");
-                    losses++;
-                } else {
-                    alert("You win!")
-                    wins++;
-                }
-            }
-        }
-
-        // Shows the final scores
-        alert("Wins: " + wins + "\nLoses: " + losses + "\nTies: " + ties)
-
-        // Alerts the outcome
-        if (wins > losses) {
-            alert("You win!")
-        } else if (losses > wins) {
-            alert("You lose!")
+        var loses = 0;
+for(var i = 0; i < 10; i++){
+        var selection = prompt("Choose r, p, or s");
+        var random = Math.floor(Math.random() * 3) + 1;
+        if(random == 1){
+            alert("The computer chose rock");
+        } else if (random == 2){
+            alert("The computer chose paper");
         } else {
-            alert("You tied!")
+            alert("The computer chose scissors");
         }
+        
+
+        if(selection == "r"){
+            if(random == 1){
+                alert("You tied");
+                ties++;
+            } else if (random == 2){
+                alert("You lose");
+                loses++;
+            } else {
+                alert("You win!");
+                wins++;
+            }
+        }
+
+        if(selection == "p"){
+            if(random == 2){
+                alert("You tied");
+                ties++;
+            } else if (random == 3){
+                alert("You lose");
+                loses++;
+            } else {
+                alert("You win!");
+                wins++;
+            }
+        }
+
+        if(selection == "s"){
+            if(random == 3){
+                alert("You tied");
+                ties++;
+            } else if (random == 1){
+                alert("You lose");
+                loses++;
+            } else {
+                alert("You win!");
+                wins++;
+            }
+        }
+var wins = (parseInt(wins));
+var wins = (parseInt(wins));
+alert (wins);
+}
+
+
+
+if(wins > 5) {
+    alert("You won the game!");
+} else if(loses > 5) {
+    alert("You lost the game!");
+} else {
+    alert("You Tied the game!");
+}
     </script>
 </body>
-
 </html>
