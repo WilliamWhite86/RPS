@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var wins;
+        var ties;
+        var loses;
+for(var i = 0; i < 10; i++){
+        var selection = prompt("Choose r, p, or s");
+        var random = Math.floor(Math.random() * 3) + 1;
+        if(random == 1){
+            alert("The computer chose rock");
+        } else if (random == 2){
+            alert("The computer chose paper")
+        } else {
+            alert("The computer chose scissors")
+        }
+        
+
+        if(selection == "r"){
+            if(random == 1){
+                alert("You tied");
+                ties++;
+            } else if (random == 2){
+                alert("You lose");
+                loses++;
+            } else {
+                alert("You win!")
+                wins++;
+            }
+        }
+
+        if(selection == "p"){
+            if(random == 2){
+                alert("You tied");
+                ties++;
+            } else if (random == 3){
+                alert("You lose");
+                loses++;
+            } else {
+                alert("You win!")
+                wins++;
+            }
+        }
+
+        if(selection == "s"){
+            if(random == 3){
+                alert("You tied");
+                ties++;
+            } else if (random == 1){
+                alert("You lose");
+                loses++;
+            } else {
+                alert("You win!")
+                wins++;
+            }
+        }
+}
+
+alert("Wins: " + wins <br> "Loses: " + loses <br> "Ties: " + ties)
+if(wins > 5) {
+    alert("You win!")
+} else if(loses > 5) {
+    alert("You lose!")
+} else {
+    alert("You Tied!")
+}
+    </script>
+</body>
+</html>
